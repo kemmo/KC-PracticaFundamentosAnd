@@ -9,7 +9,7 @@
     <ImageView
         android:id="@+id/course_image"
         android:layout_width="@dimen/course_image_width"
-        android:layout_height="wrap_content"
+        android:layout_height="180dp"
         android:layout_gravity="center_horizontal"
         android:layout_margin="@dimen/default_activity_padding"/>
 
@@ -84,5 +84,18 @@
             android:visibility="gone"
             android:src="@drawable/ico_cascara"/>
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/course_variants"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/default_activity_padding" />
+    <EditText
+        android:id="@+id/course_variants_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:visibility="gone"/>
 
 </LinearLayout>

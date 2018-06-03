@@ -35,6 +35,7 @@ class AddCourseActivity : AppCompatActivity() {
         val course = intent.extras[EXTRA_COURSE] as Course
         val table = intent.extras[EXTRA_TABLE] as Table
 
+        course_variants_edit.visibility = View.VISIBLE
 
         course_image.setImageResource(course.imageRes)
         course_title.text = course.name
@@ -57,6 +58,8 @@ class AddCourseActivity : AppCompatActivity() {
         }
 
         save_button.setOnClickListener {
+            val variant = ""+course_variants_edit.text
+            course.variants = variant
             Tables.addCourseToTable(course, table)
             finish()
         }

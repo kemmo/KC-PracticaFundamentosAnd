@@ -31,6 +31,7 @@ class CourseDetailActivity : AppCompatActivity() {
 
         course_image.setImageResource(course.imageRes)
         course_title.text = course.name
+        course_variants.text = "VARIANTES: $course.variants"
 
         var ingredients = "INGREDIENTES: \r\n"
         course.ingredients.forEach {
