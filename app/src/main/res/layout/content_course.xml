@@ -1,0 +1,134 @@
+<android.support.v7.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="16dp"
+    android:layout_margin="8dp"
+    app:cardElevation="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/default_activity_padding">
+
+        <TextView
+            android:id="@+id/course_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            tools:text="Course" />
+
+        <ImageView
+            android:id="@+id/course_image"
+            android:layout_width="@dimen/course_image_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@id/course_name"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ico_huevos" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/course_image"
+            android:layout_toEndOf="@id/course_image"
+            android:layout_below="@id/course_name"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@id/course_image"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/course_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/course_ingredients"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/course_allergens"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/default_activity_padding"
+            android:orientation="horizontal"
+            android:layout_below="@+id/course_image">
+
+            <ImageView
+                android:id="@+id/allergen_shellfish"
+                android:layout_width="@dimen/allergen_image_dimen"
+                android:layout_height="@dimen/allergen_image_dimen"
+                android:layout_margin="@dimen/allergen_image_margin"
+                android:src="@drawable/ico_mariscos"
+                android:visibility="gone" />
+            <ImageView
+                android:id="@+id/allergen_egg"
+                android:layout_width="@dimen/allergen_image_dimen"
+                android:layout_height="@dimen/allergen_image_dimen"
+                android:visibility="gone"
+                android:layout_margin="@dimen/allergen_image_margin"
+                android:src="@drawable/ico_huevos"/>
+            <ImageView
+                android:id="@+id/allergen_gluten"
+                android:layout_width="@dimen/allergen_image_dimen"
+                android:layout_height="@dimen/allergen_image_dimen"
+                android:layout_margin="@dimen/allergen_image_margin"
+                android:visibility="gone"
+                android:src="@drawable/ico_gluten"/>
+            <ImageView
+                android:id="@+id/allergen_lactose"
+                android:layout_width="@dimen/allergen_image_dimen"
+                android:layout_height="@dimen/allergen_image_dimen"
+                android:layout_margin="@dimen/allergen_image_margin"
+                android:visibility="gone"
+                android:src="@drawable/ico_leche"/>
+            <ImageView
+                android:id="@+id/allergen_fish"
+                android:layout_width="@dimen/allergen_image_dimen"
+                android:layout_height="@dimen/allergen_image_dimen"
+                android:layout_margin="@dimen/allergen_image_margin"
+                android:visibility="gone"
+                android:src="@drawable/ico_pescado"/>
+            <ImageView
+                android:id="@+id/allergen_soy"
+                android:layout_width="@dimen/allergen_image_dimen"
+                android:layout_height="@dimen/allergen_image_dimen"
+                android:layout_margin="@dimen/allergen_image_margin"
+                android:visibility="gone"
+                android:src="@drawable/ico_soja"/>
+            <ImageView
+                android:id="@+id/allergen_husks"
+                android:layout_width="@dimen/allergen_image_dimen"
+                android:layout_height="@dimen/allergen_image_dimen"
+                android:layout_margin="@dimen/allergen_image_margin"
+                android:visibility="gone"
+                android:src="@drawable/ico_cascara"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/course_variants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/course_allergens" />
+
+
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>
